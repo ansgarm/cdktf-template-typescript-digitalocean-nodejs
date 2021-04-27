@@ -4,6 +4,7 @@ const { readFileSync, writeFileSync } = require('fs');
 const constructs_version = require('../../package.json').dependencies.constructs;
 
 exports.post = ctx => {
+  console.log('Executing sscaff post hook');
   // Terraform Cloud configuration settings if the organization name and workspace is set.
   if (ctx.OrganizationName != '') {
     console.log(`\nGenerating Terraform Cloud configuration for '${ctx.OrganizationName}' organization and '${ctx.WorkspaceName}' workspace.....`)
