@@ -38,9 +38,6 @@ class MyStack extends TerraformStack {
   }
 }
 
-new MyStack(app, '{{ $base }}-development');
-new MyStack(app, '{{ $base }}-production');
-
 const app = new App();
 new MyStack(app, '{{ $base }}-development', {
   environmentSlug: 'dev',
